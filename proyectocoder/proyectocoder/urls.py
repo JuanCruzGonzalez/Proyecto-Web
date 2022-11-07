@@ -20,5 +20,6 @@ from proyectocoder.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("nacimiento/<edad>/", nacimiento),
-    path("plantilla/", vista_plantilla)
+    path("plantilla/", vista_plantilla),
+    path("alumnos/", vista_listado_alumnos2)
 ]
