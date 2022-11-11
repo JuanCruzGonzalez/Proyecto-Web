@@ -40,6 +40,6 @@ def vista_listado_alumnos(resquest):
 def vista_listado_alumnos2(request):
     listado_alumnos=["JUAN GONZALEZ", "LEONEL GAREIS", "SANTIAGO ORTIZ", "LUCAS PIOVILLICO"]
     datos={"Tecnologia":"Python", "listado_alumnos": listado_alumnos}
-    plantilla=loader.get_template("listado_alumnos.html")
+    plantilla=loader.get_template("base.html")
     documento=plantilla.render(datos)
     return HttpResponse(documento)
