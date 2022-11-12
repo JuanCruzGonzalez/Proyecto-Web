@@ -20,11 +20,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Inicio</a>
-                <a class="navbar-brand" href="#!">Estudiantes</a>
-                <a class="navbar-brand" href="#!">Entregables</a>
-                <a class="navbar-brand" href="#!">Profesores</a>
-                <a class="navbar-brand" href="#!">Cursos</a>
+                <a class="navbar-brand" href="{% url 'coder-inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'coder-estudiantes' %}">Estudiantes</a>
+                <a class="navbar-brand" href="{% url 'coder-entregables' %}">Entregables</a>
+                <a class="navbar-brand" href="{% url 'coder-profesores' %}">Profesores</a>
+                <a class="navbar-brand" href="{% url 'coder-cursos' %}">Cursos</a>
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
             </div>
         </nav>
@@ -42,7 +42,9 @@
                 </div>
             </div>
         </header>
-        <!-- Footer-->
+        {% block contenidoQueCambia %}
+
+        {% endblock %}
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">
