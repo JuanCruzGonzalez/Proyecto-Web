@@ -1,0 +1,8 @@
+{% extends "coder/base.html" %}
+{% block contenidoQueCambia %}
+<ul>
+    {% for curso in cursos%}
+    <li>{{curso.nombre}}-{{curso.camada}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

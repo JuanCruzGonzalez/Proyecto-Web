@@ -1,0 +1,13 @@
+{% extends "coder/base.html" %}
+{% block contenidoQueCambia %}
+<form action="/coder/formulario" method="post">
+    {% csrf_token %}
+    <p>
+        Curso <input type="text" name="curso">
+    </p>
+    <p>
+        Camada <input type="number" name="camada">
+    </p>
+    <input type="submit" value="Crear Curso">
+</form>
+{% endblock %}

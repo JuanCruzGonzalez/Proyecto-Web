@@ -1,0 +1,9 @@
+{% extends "coder/base.html" %}
+{% block contenidoQueCambia %}
+<form action="{% url 'cursos-buscar-resultado'%}" method="get">
+    <p>
+        Nombre del curso: <input type="text" name="nombre_curso">
+        <input type="submit" value="Buscar">
+    </p>
+</form>
+{% endblock %}
