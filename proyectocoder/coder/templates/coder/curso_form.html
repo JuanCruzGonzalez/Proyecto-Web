@@ -1,0 +1,11 @@
+{% extends 'coder/base.html' %}
+{% block contenidoQueCambia %}
+
+<form method="post">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Crear/Actualizar">
+</form>
+
+{% endblock %}

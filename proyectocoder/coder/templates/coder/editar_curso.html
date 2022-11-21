@@ -1,0 +1,13 @@
+{% extends "coder/base.html" %}
+{% block contenidoQueCambia %}
+{% if errores %}
+    <p style="color:red">{{errores}}</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    {{formulario.as_p}}
+    <input type="submit" value="Actualizar">
+</form>
+
+{% endblock %}

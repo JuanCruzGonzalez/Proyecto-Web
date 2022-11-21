@@ -1,0 +1,13 @@
+{% extends 'coder/base.html' %}
+{% block contenidoQueCambia %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        ¿Seguro que quiere borrar {{object.nombre}}?
+        <input type="submit" value="Si">
+    </p>
+    <a href="{% url 'coder-cursos' %}"> Volver al listado de cursos</a>
+</form>
+
+{% endblock %}

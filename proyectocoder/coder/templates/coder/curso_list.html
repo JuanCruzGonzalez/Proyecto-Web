@@ -1,0 +1,16 @@
+{% extends "coder/base.html" %}
+{% block contenidoQueCambia %}
+
+<h1>Lista de Cursos</h1>
+
+<ul>
+    {% for curso in object_list %}
+        <li>
+            {{curso.nombre}}
+            <a href="{% url 'coder-cursos-detalle' curso.id%}">Detalle</a>
+            <a href="{% url 'coder-cursos-borrar' curso.id%}">Borrar</a>
+            <a href="{% url 'coder-cursos-update' curso.id%}">Actualizar</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
