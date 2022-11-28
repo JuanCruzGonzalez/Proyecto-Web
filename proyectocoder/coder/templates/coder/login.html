@@ -1,0 +1,17 @@
+{% extends 'coder/base.html'%}
+{% block contenidoQueCambia %}
+
+{% if errors %}
+
+    <p style="color:red">Error en el inicio de secion: {{errors}}</p>
+
+{% endif %}
+
+<form method="post">
+    {% csrf_token%}
+    {{formulario.as_p}}
+
+    <input type="submit" value="Iniciar Sesion">
+</form>
+
+{% endblock %}

@@ -25,7 +25,14 @@
                 <a class="navbar-brand" href="{% url 'coder-entregables' %}">Entregables</a>
                 <a class="navbar-brand" href="{% url 'coder-profesores' %}">Profesores</a>
                 <a class="navbar-brand" href="{% url 'coder-cursos' %}">Cursos</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+
+                {% if request.user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'logout'%}">Logout</a>
+                    <p class="text muted small mb-4 mb-lg-0"> Hola {{request.user}}</p>
+                    <img src="{{imagen_url}}" style="max-width: 15px;">
+                {% else %}
+                    <a class="btn btn-primary" href="{% url 'iniciar-secion'%}">Log in</a>
+                {% endif %}
             </div>
         </nav>
         <!-- Masthead-->
